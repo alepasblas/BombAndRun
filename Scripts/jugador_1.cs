@@ -4,7 +4,7 @@ using System;
 public partial class jugador_1 : CharacterBody2D
 {
 	public int vida = 100;
-	public int velocidad = 200;
+	public int velocidad = 150;
 
 	
 	int vidas = 5;

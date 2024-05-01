@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://mox3g0d1p0k2"]
+[gd_scene load_steps=7 format=3 uid="uid://mox3g0d1p0k2"]
 
 [ext_resource type="PackedScene" uid="uid://d04r6rsuj63ox" path="res://Escenas/mapaConObstaculosPermanentes.tscn" id="1_u80c6"]
 [ext_resource type="PackedScene" uid="uid://gxr08ga73swr" path="res://Escenas/jugador_1.tscn" id="2_xngj0"]
 [ext_resource type="PackedScene" uid="uid://bt1k1jqg1t8jv" path="res://Escenas/puntuacion_en_pantalla.tscn" id="3_4hwt7"]
 [ext_resource type="FontFile" uid="uid://bb7vnc4w7w7lv" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="4_ky2kr"]
-[ext_resource type="PackedScene" uid="uid://b5hrypehq3w5d" path="res://Escenas/bomba.tscn" id="5_t4uog"]
+[ext_resource type="Script" path="res://Escenas/bloque.cs" id="6_s4wme"]
+[ext_resource type="PackedScene" uid="uid://vvh0nwpnaef5" path="res://Escenas/bloque.tscn" id="6_y7lqm"]
 
 [node name="Mundo1" type="Node2D"]
 position = Vector2(0, 27)
@@ -17,7 +18,7 @@ position = Vector2(352, 239)
 zoom = Vector2(1.8, 1.8)
 
 [node name="Jugador1" parent="." instance=ExtResource("2_xngj0")]
-position = Vector2(44, 48)
+position = Vector2(42, 38)
 
 [node name="PuntuacionEnPantalla" parent="." instance=ExtResource("3_4hwt7")]
 position = Vector2(67, -27)
@@ -34,5 +35,42 @@ theme_override_fonts/font = ExtResource("4_ky2kr")
 text = "SCORE:"
 metadata/_edit_use_anchors_ = true
 
-[node name="Bomba" parent="." instance=ExtResource("5_t4uog")]
-position = Vector2(89, 59)
+[node name="RigidBody2D" parent="." instance=ExtResource("6_y7lqm")]
+position = Vector2(57, 75)
+script = ExtResource("6_s4wme")
+
+[node name="RigidBody2D" parent="RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, -16)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D/RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D2" parent="RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(32, -32)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D2" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D2/RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D3" parent="RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(64, -16)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D3" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D3/RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D4" parent="RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(80, -32)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D4" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
+
+[node name="RigidBody2D" parent="RigidBody2D/RigidBody2D4/RigidBody2D" instance=ExtResource("6_y7lqm")]
+position = Vector2(16, 0)
