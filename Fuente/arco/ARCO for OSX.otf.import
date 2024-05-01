@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://dslvlpp652rvj"
+path="res://.godot/imported/ARCO for OSX.otf-7a8dba7e965d8e3c0406dd89bd0f079b.fontdata"
+
+[deps]
+
+source_file="res://Fuente/arco/ARCO for OSX.otf"
+dest_files=["res://.godot/imported/ARCO for OSX.otf-7a8dba7e965d8e3c0406dd89bd0f079b.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

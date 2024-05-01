@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5hrypehq3w5d"]
+
+[ext_resource type="Script" path="res://Scripts/bomba.cs" id="1_uqv1j"]
+[ext_resource type="Texture2D" uid="uid://tcthocuimy6h" path="res://imagenes/sprites.png" id="1_y8nlb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vb7q"]
+
+[sub_resource type="Animation" id="Animation_qhsh0"]
+resource_name = "BombaAnim"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.8, 3.2, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, -2),
+"update": 1,
+"values": [60, 61, 62, 63, 64, 65, 66, 67, 68, 69]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1dcbc"]
+_data = {
+"BombaAnim": SubResource("Animation_qhsh0")
+}
+
+[node name="Bomba" type="RigidBody2D"]
+script = ExtResource("1_uqv1j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_7vb7q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_y8nlb")
+hframes = 9
+vframes = 8
+frame = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_1dcbc")
+}

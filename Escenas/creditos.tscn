@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwpj6iqoqh2bx"]
+
+[ext_resource type="Texture2D" uid="uid://vouiwgvw7g2u" path="res://imagenes/fotoCreditos.jpg" id="1_a41t0"]
+[ext_resource type="Texture2D" uid="uid://rad85hmqlgi2" path="res://imagenes/bocadillo.png" id="2_4mcn0"]
+[ext_resource type="FontFile" uid="uid://bb7vnc4w7w7lv" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="3_4isxa"]
+
+[node name="Creditos" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="FotoCreditos" type="Sprite2D" parent="."]
+position = Vector2(959.5, 540)
+scale = Vector2(0.476438, 0.401786)
+texture = ExtResource("1_a41t0")
+
+[node name="Bocadillo" type="Sprite2D" parent="."]
+position = Vector2(893, 453)
+scale = Vector2(0.962777, 0.936111)
+texture = ExtResource("2_4mcn0")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 456.0
+offset_top = 306.0
+offset_right = 1309.0
+offset_bottom = 483.0
+theme_override_colors/background_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_4isxa")
+theme_override_font_sizes/font_size = 25
+text = "Productor: Alejandro Pastor Blasco
+Programa principal: Alejandro Pastor Blasco
+Supervisor: Alejandro Pastor Blasco
+Unidad de pruebas y depuracion: Alejandro Pastor Blasco "
