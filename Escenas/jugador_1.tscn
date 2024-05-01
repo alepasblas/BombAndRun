@@ -127,7 +127,8 @@ hframes = 8
 vframes = 5
 frame = 6
 
-[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
 libraries = {
 "": SubResource("AnimationLibrary_5u4oh")
 }

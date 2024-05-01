@@ -3,8 +3,6 @@
 [ext_resource type="Script" path="res://Scripts/bomba.cs" id="1_uqv1j"]
 [ext_resource type="Texture2D" uid="uid://tcthocuimy6h" path="res://imagenes/sprites.png" id="1_y8nlb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vb7q"]
-
 [sub_resource type="Animation" id="Animation_qhsh0"]
 resource_name = "BombaAnim"
 length = 4.0
@@ -27,15 +25,15 @@ _data = {
 "BombaAnim": SubResource("Animation_qhsh0")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vb7q"]
+size = Vector2(16, 16)
+
 [node name="Bomba" type="RigidBody2D"]
 script = ExtResource("1_uqv1j")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-shape = SubResource("RectangleShape2D_7vb7q")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.6, 0.6)
+position = Vector2(2.98023e-08, -2.98023e-08)
+scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_y8nlb")
 hframes = 9
 vframes = 8
@@ -45,3 +43,8 @@ frame = 60
 libraries = {
 "": SubResource("AnimationLibrary_1dcbc")
 }
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7vb7q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

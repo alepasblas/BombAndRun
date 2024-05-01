@@ -3,7 +3,10 @@ using System;
 
 public partial class jugador_1 : CharacterBody2D
 {
-	public const float movementSpeed = 300.0f;
+	public int vida = 100;
+	public int velocidad = 200;
+
+	
 	int vidas = 5;
 	bomba bombaInstance;
 
@@ -20,30 +23,73 @@ public partial class jugador_1 : CharacterBody2D
 		float yMov = Input.GetActionStrength("MoverAbajo") - Input.GetActionStrength("MoverArriba");
 		Vector2 mov = new Vector2(xMov, yMov);
 
-		Velocity = mov.Normalized() * movementSpeed;
+		Velocity = mov.Normalized() * velocidad;
 		MoveAndSlide();
 	}
 
 	public override void _Process(double delta)
 	{
-		ColocarBomba();
+		if(Input.IsPhysicalKeyPressed(Key.S))
+		{
+			MovAbajo();
+		}
+		else if(Input.IsPhysicalKeyPressed(Key.A))
+		{
+			MoverIzq();
+		}
+		else if(Input.IsPhysicalKeyPressed(Key.D))
+		{
+			MoverDer();
+		}
+		else if(Input.IsPhysicalKeyPressed(Key.W))
+		{
+			MovArriba();
+		}
+
+		//ColocarBomba();
 	}
 
+	public void MoverIzq()
+	{
+		Sprite2D sprite = GetNode<Sprite2D>("Sprite2D");
+		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer2");
+		animPlayer.Play("MovIzq");
+	}
+
+	public void MoverDer()
+	{
+		Sprite2D sprite = GetNode<Sprite2D>("Sprite2D");
+		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer2");
+		animPlayer.Play("MovDer");
+	}
+	public void MovAbajo()
+	{
+		Sprite2D sprite = GetNode<Sprite2D>("Sprite2D");
+		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer2");
+		animPlayer.Play("MovAbajo");
+	}
+
+	public void MovArriba()
+	{
+		Sprite2D sprite = GetNode<Sprite2D>("Sprite2D");
+		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer2");
+		animPlayer.Play("MovArriba");
+	}
+
+	/*
 	private void ColocarBomba()
 	{
 		if (Input.IsActionPressed("ColocarBomba"))
 		{
-			if (bombaInstance == null)
-			{
-				bombaInstance = new bomba(); 
-				AddChild(bombaInstance); 
-			}
-
-			bombaInstance.Activar(); 
+			bombaInstance= new bomba();
+			bombaInstance.Activar();
 		}
-	}
+	}*/
 
 
 }
+
+
+
 
 

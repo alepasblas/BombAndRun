@@ -18,10 +18,14 @@ public partial class bomba : RigidBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-
+		Activar();
 	}
+
+	
 
 
 
 	//Mirar Error de colocar Bomba
 }
+
+
