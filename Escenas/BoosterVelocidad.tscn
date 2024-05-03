@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://vvh0nwpnaef5"]
+
+[ext_resource type="Texture2D" uid="uid://cou3sl7jnkh0q" path="res://imagenes/Bloque.png" id="1_oti5y"]
+[ext_resource type="Script" path="res://Scripts/BoosterVelocidad.cs" id="1_tb8oa"]
+[ext_resource type="Texture2D" uid="uid://dm6rjfcbl41kb" path="res://imagenes/bota.png" id="2_chyie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7m3ts"]
+size = Vector2(15.25, 15.25)
+
+[node name="BoosterVelocidad" type="RigidBody2D"]
+texture_filter = 1
+script = ExtResource("1_tb8oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5.96046e-08, -5.96046e-08)
+scale = Vector2(0.00791667, 0.00791667)
+texture = ExtResource("1_oti5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_7m3ts")
+
+[node name="Bota" type="Sprite2D" parent="."]
+position = Vector2(0, 0.00862498)
+scale = Vector2(0.0111151, 0.0125425)
+texture = ExtResource("2_chyie")

@@ -25,6 +25,8 @@ public partial class PuntuacionFinal : Node2D
 		try
 		{
 			String[] fichero= File.ReadAllLines("Archivos/puntuacion.txt");
+
+			
 			
 			for(int i=0; i<fichero.Length; i++)
 			{
