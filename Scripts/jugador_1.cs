@@ -3,7 +3,7 @@ using System;
 
 public partial class jugador_1 : CharacterBody2D
 {
-
+	
 	[Export]
 	public int salud = 150;
 	[Export]
@@ -17,6 +17,7 @@ public partial class jugador_1 : CharacterBody2D
 	public override void _PhysicsProcess(double delta)
 	{
 		Movimiento();
+
 	}
 
 	private void Movimiento()
@@ -27,6 +28,7 @@ public partial class jugador_1 : CharacterBody2D
 
 		Velocity = mov.Normalized() * velocidad;
 		MoveAndSlide();
+		PonerBomba();
 	}
 
 	public override void _Process(double delta)
@@ -78,15 +80,15 @@ public partial class jugador_1 : CharacterBody2D
 		animPlayer.Play("MovArriba");
 	}
 
-	/*
-	private void ColocarBomba()
+	public void PonerBomba()
 	{
-		if (Input.IsActionPressed("ColocarBomba"))
+		if(Input.IsPhysicalKeyPressed(Key.E))
 		{
-			bombaInstance= new bomba();
-			bombaInstance.Activar();
+			var scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
+			AddChild(scene);
 		}
-	}*/
+	}
+	
 
 
 }
