@@ -3,9 +3,11 @@ using System;
 
 public partial class jugador_1 : CharacterBody2D
 {
-	public int vida = 100;
-	public int velocidad = 150;
 
+	[Export]
+	public int salud = 150;
+	[Export]
+	public int velocidad = 100;
 	
 	int vidas = 5;
 	bomba bombaInstance;

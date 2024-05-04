@@ -36,3 +36,5 @@ metadata/_edit_use_anchors_ = true
 
 [node name="BoosterVelocidad" parent="." instance=ExtResource("5_q3xm8")]
 position = Vector2(89, 42)
+
+[connection signal="body_entered" from="BoosterVelocidad" to="BoosterVelocidad" method="_on_body_entered"]

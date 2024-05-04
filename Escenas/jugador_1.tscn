@@ -113,7 +113,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xw4a4"]
-size = Vector2(14.5, 13.25)
+size = Vector2(14.25, 12.625)
 
 [node name="Jugador1" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ck8lu")
@@ -134,5 +134,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(-0.125, 7.6875)
 shape = SubResource("RectangleShape2D_xw4a4")
