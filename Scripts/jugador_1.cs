@@ -50,7 +50,6 @@ public partial class jugador_1 : CharacterBody2D
 			MovArriba();
 		}
 
-		//ColocarBomba();
 	}
 
 	public void MoverIzq()
@@ -86,6 +85,15 @@ public partial class jugador_1 : CharacterBody2D
 		{
 			var scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
 			AddChild(scene);
+		}
+	}
+
+	public void SinVida()
+	{
+		if(salud>=0)
+		{
+			//Poner la escena de cuando mueres
+			GetTree().ChangeSceneToFile("res://Escenas/Muerte.tscn");
 		}
 	}
 	

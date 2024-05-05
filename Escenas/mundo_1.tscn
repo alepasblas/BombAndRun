@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://mox3g0d1p0k2"]
+[gd_scene load_steps=9 format=3 uid="uid://mox3g0d1p0k2"]
 
 [ext_resource type="PackedScene" uid="uid://d04r6rsuj63ox" path="res://Escenas/mapaConObstaculosPermanentes.tscn" id="1_u80c6"]
 [ext_resource type="Script" path="res://Scripts/mapa.cs" id="2_ds73m"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://bb7vnc4w7w7lv" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="4_ky2kr"]
 [ext_resource type="PackedScene" uid="uid://vvh0nwpnaef5" path="res://Escenas/BoosterVelocidad.tscn" id="5_q3xm8"]
 [ext_resource type="PackedScene" uid="uid://bus0828rfwuap" path="res://Escenas/rayo.tscn" id="6_wsyad"]
+[ext_resource type="PackedScene" uid="uid://pw38yiwt08a" path="res://Escenas/enemigos.tscn" id="8_btp32"]
 
 [node name="Mundo1" type="Node2D"]
 position = Vector2(0, 27)
@@ -20,10 +21,13 @@ position = Vector2(352, 239)
 zoom = Vector2(1.8, 1.8)
 
 [node name="Jugador1" parent="." instance=ExtResource("2_xngj0")]
-position = Vector2(42, 47)
+position = Vector2(42, 44)
+
+[node name="Enemigos" parent="." instance=ExtResource("8_btp32")]
+position = Vector2(328, 428)
 
 [node name="PuntuacionEnPantalla" parent="." instance=ExtResource("3_4hwt7")]
-position = Vector2(67, -27)
+position = Vector2(66, -27)
 
 [node name="TextEdit" type="Label" parent="."]
 texture_filter = 1
@@ -43,5 +47,6 @@ position = Vector2(89, 41)
 [node name="Rayo" parent="." instance=ExtResource("6_wsyad")]
 position = Vector2(41, 89)
 
+[connection signal="body_entered" from="Enemigos" to="Enemigos" method="_on_body_entered"]
 [connection signal="body_entered" from="BoosterVelocidad" to="BoosterVelocidad" method="_on_body_entered"]
 [connection signal="body_entered" from="Rayo" to="Rayo" method="_on_body_entered"]

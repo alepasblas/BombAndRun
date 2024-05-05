@@ -20,7 +20,6 @@ public partial class BoosterVelocidad : Area2D
 		{
 			jugador.velocidad += 50;
 			QueueFree();
-			GD.Print("Chocado");
 		}
 	}
 
