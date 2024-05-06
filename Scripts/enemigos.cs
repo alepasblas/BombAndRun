@@ -1,19 +1,21 @@
 using Godot;
 using System;
 
-public partial class enemigos : RigidBody2D
+public partial class enemigos : Godot.Area2D
 {
 
-	private Vector2 velocidad;
-
+	private int velocidad;
+	private mundo_1 juego;
+	
 	public override void _Ready()
 	{
-		velocidad = new Vector2(100, 0);
+		velocidad = 75;
 
+		juego= GetNode<mundo_1>("/root/Mundo1");
 	}
 	public void Animacion()
 	{
-		AnimatedSprite2D spriteEnemigo = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		Sprite2D spriteEnemigo = GetNode<Sprite2D>("Sprite2D");
 		AnimationPlayer animacion = spriteEnemigo.GetNode<AnimationPlayer>("AnimationPlayer");
 		animacion.Play("enemigo");
 	}
@@ -23,23 +25,21 @@ public partial class enemigos : RigidBody2D
 	{
 		Animacion();
 
-		Position += velocidad * (float)delta;
-		if (Position.X > 691)
-		{
-			velocidad = new Vector2(-100, 0);
-		}
-		if (Position.X < 40)
-		{
-			velocidad = new Vector2(100, 0);
-		}
+		Vector2 posPersonaje = juego.GetPosicionPersonaje();
+		
+		Vector2 distancia= posPersonaje - Position;
+		
+		Position+= distancia.Normalized() * velocidad * (float)delta;
+	
 	}
 
 	private void _on_body_entered(Node body)
 	{
 		if (body is jugador_1 jugador)
 		{
-			jugador.salud -= 50;
-			GD.Print("-50 de vida");
+			jugador.salud -= 5;
+			GD.Print("-5 de vida");
+			jugador.SinVida();
 			
 		}
 	}

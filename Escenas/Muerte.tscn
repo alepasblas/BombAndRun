@@ -10,6 +10,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 759.0
+offset_top = 589.0
+offset_right = 1199.0
+offset_bottom = 623.0
+theme_override_fonts/font = ExtResource("1_o8l1e")
+theme_override_font_sizes/font_size = 25
+text = "Te quedaste sin vida"
+
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 560.0

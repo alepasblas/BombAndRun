@@ -1,16 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://mox3g0d1p0k2"]
+[gd_scene load_steps=11 format=3 uid="uid://mox3g0d1p0k2"]
 
+[ext_resource type="Script" path="res://Scripts/mundo_1.cs" id="1_kwr4l"]
 [ext_resource type="PackedScene" uid="uid://d04r6rsuj63ox" path="res://Escenas/mapaConObstaculosPermanentes.tscn" id="1_u80c6"]
 [ext_resource type="Script" path="res://Scripts/mapa.cs" id="2_ds73m"]
 [ext_resource type="PackedScene" uid="uid://gxr08ga73swr" path="res://Escenas/jugador_1.tscn" id="2_xngj0"]
 [ext_resource type="PackedScene" uid="uid://bt1k1jqg1t8jv" path="res://Escenas/puntuacion_en_pantalla.tscn" id="3_4hwt7"]
 [ext_resource type="FontFile" uid="uid://bb7vnc4w7w7lv" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="4_ky2kr"]
 [ext_resource type="PackedScene" uid="uid://vvh0nwpnaef5" path="res://Escenas/BoosterVelocidad.tscn" id="5_q3xm8"]
+[ext_resource type="Script" path="res://Scripts/Vida.cs" id="6_c25av"]
 [ext_resource type="PackedScene" uid="uid://bus0828rfwuap" path="res://Escenas/rayo.tscn" id="6_wsyad"]
 [ext_resource type="PackedScene" uid="uid://pw38yiwt08a" path="res://Escenas/enemigos.tscn" id="8_btp32"]
 
 [node name="Mundo1" type="Node2D"]
 position = Vector2(0, 27)
+script = ExtResource("1_kwr4l")
+
+[node name="Vida" type="Label" parent="."]
+texture_filter = 1
+offset_left = 332.0
+offset_top = -23.0
+offset_right = 410.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("4_ky2kr")
+text = "Vida:"
+script = ExtResource("6_c25av")
 
 [node name="TileMap" parent="." instance=ExtResource("1_u80c6")]
 position = Vector2(1, 2)
@@ -21,10 +35,13 @@ position = Vector2(352, 239)
 zoom = Vector2(1.8, 1.8)
 
 [node name="Jugador1" parent="." instance=ExtResource("2_xngj0")]
-position = Vector2(42, 44)
+position = Vector2(45, 49)
 
 [node name="Enemigos" parent="." instance=ExtResource("8_btp32")]
-position = Vector2(328, 428)
+position = Vector2(668, 359)
+
+[node name="Enemigos2" parent="." instance=ExtResource("8_btp32")]
+position = Vector2(67, 431)
 
 [node name="PuntuacionEnPantalla" parent="." instance=ExtResource("3_4hwt7")]
 position = Vector2(66, -27)
@@ -42,11 +59,24 @@ text = "SCORE:"
 metadata/_edit_use_anchors_ = true
 
 [node name="BoosterVelocidad" parent="." instance=ExtResource("5_q3xm8")]
-position = Vector2(89, 41)
+position = Vector2(88, 42)
+
+[node name="BoosterVelocidad2" parent="." instance=ExtResource("5_q3xm8")]
+position = Vector2(249, 122)
+
+[node name="BoosterVelocidad3" parent="." instance=ExtResource("5_q3xm8")]
+position = Vector2(378, 282)
+
+[node name="BoosterVelocidad4" parent="." instance=ExtResource("5_q3xm8")]
+position = Vector2(539, 377)
 
 [node name="Rayo" parent="." instance=ExtResource("6_wsyad")]
-position = Vector2(41, 89)
+position = Vector2(74, 139)
 
 [connection signal="body_entered" from="Enemigos" to="Enemigos" method="_on_body_entered"]
+[connection signal="body_entered" from="Enemigos2" to="Enemigos2" method="_on_body_entered"]
 [connection signal="body_entered" from="BoosterVelocidad" to="BoosterVelocidad" method="_on_body_entered"]
+[connection signal="body_entered" from="BoosterVelocidad2" to="BoosterVelocidad2" method="_on_body_entered"]
+[connection signal="body_entered" from="BoosterVelocidad3" to="BoosterVelocidad3" method="_on_body_entered"]
+[connection signal="body_entered" from="BoosterVelocidad4" to="BoosterVelocidad4" method="_on_body_entered"]
 [connection signal="body_entered" from="Rayo" to="Rayo" method="_on_body_entered"]

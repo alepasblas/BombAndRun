@@ -18,6 +18,7 @@ public partial class jugador_1 : CharacterBody2D
 	{
 		Movimiento();
 
+
 	}
 
 	private void Movimiento()
@@ -78,24 +79,33 @@ public partial class jugador_1 : CharacterBody2D
 		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer2");
 		animPlayer.Play("MovArriba");
 	}
-
+	
 	public void PonerBomba()
 	{
-		if(Input.IsPhysicalKeyPressed(Key.E))
+		if (Input.IsActionJustPressed("ColocarBomba") && bombaInstance == null)
 		{
-			var scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
-			AddChild(scene);
+			// Crear una nueva instancia de bomba
+			Node scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
+
+
+			GetTree().Root.AddChild(scene);
+
 		}
 	}
 
+
+
 	public void SinVida()
 	{
-		if(salud>=0)
+		if(salud<=0)
 		{
 			//Poner la escena de cuando mueres
 			GetTree().ChangeSceneToFile("res://Escenas/Muerte.tscn");
 		}
 	}
+	
+	
+
 	
 
 
