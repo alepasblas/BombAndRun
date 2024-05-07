@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dqp6862q5sr48"]
 
 [ext_resource type="Script" path="res://Scripts/menu.cs" id="1_m14sb"]
-[ext_resource type="Texture2D" uid="uid://c4g2tgq5medcw" path="res://imagenes/Super-Bomberman-R-1.jpg" id="2_upcrb"]
+[ext_resource type="Texture2D" uid="uid://yqa2vi0yyg1e" path="res://imagenes/¡Prepárate para la explosión.png" id="2_qluqb"]
 [ext_resource type="FontFile" uid="uid://dslvlpp652rvj" path="res://Fuente/arco/ARCO for OSX.otf" id="4_j1nrr"]
 [ext_resource type="Texture2D" uid="uid://bkf4n1df4jx01" path="res://imagenes/recred.png" id="4_v5hm3"]
 
@@ -15,9 +15,9 @@ grow_vertical = 2
 script = ExtResource("1_m14sb")
 
 [node name="FondoInicio" type="Sprite2D" parent="."]
-position = Vector2(968, 540)
-scale = Vector2(1.06916, 1.08417)
-texture = ExtResource("2_upcrb")
+position = Vector2(568.688, 586)
+scale = Vector2(2.25219, 1.97572)
+texture = ExtResource("2_qluqb")
 
 [node name="VBoxBotones" type="VBoxContainer" parent="."]
 texture_filter = 1

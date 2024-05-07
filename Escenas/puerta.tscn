@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba3w6vv5clmw1"]
+
+[ext_resource type="Script" path="res://Scripts/puerta.cs" id="1_bacml"]
+[ext_resource type="Texture2D" uid="uid://dsiqxxjrfy7mx" path="res://imagenes/puerta.png" id="2_rehnb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v5vcv"]
+size = Vector2(6.25, 10)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_bacml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_rehnb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.125, 0)
+shape = SubResource("RectangleShape2D_v5vcv")

@@ -112,8 +112,8 @@ _data = {
 "RESET": SubResource("Animation_h7erc")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xw4a4"]
-size = Vector2(14.25, 12.625)
+[sub_resource type="CircleShape2D" id="CircleShape2D_40yt7"]
+radius = 6.08276
 
 [node name="Jugador1" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_ck8lu")
@@ -134,5 +134,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_xw4a4")
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_40yt7")

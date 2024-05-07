@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bus0828rfwuap" path="res://Escenas/rayo.tscn" id="6_wsyad"]
 [ext_resource type="PackedScene" uid="uid://pw38yiwt08a" path="res://Escenas/enemigos.tscn" id="8_btp32"]
 [ext_resource type="PackedScene" uid="uid://dpggxnf4sx5lu" path="res://Escenas/BoosterVida.tscn" id="11_l1o7f"]
-[ext_resource type="PackedScene" uid="uid://b5hrypehq3w5d" path="res://Escenas/bomba.tscn" id="12_lfx60"]
+[ext_resource type="PackedScene" uid="uid://ba3w6vv5clmw1" path="res://Escenas/puerta.tscn" id="13_iwjdm"]
 
 [node name="Mundo1" type="Node2D"]
 position = Vector2(0, 27)
@@ -36,16 +36,21 @@ position = Vector2(352, 239)
 zoom = Vector2(1.8, 1.8)
 
 [node name="Jugador1" parent="." instance=ExtResource("2_xngj0")]
-position = Vector2(41, 40)
+z_index = 1
+position = Vector2(41, 35)
 
 [node name="Enemigos" parent="." instance=ExtResource("8_btp32")]
+z_index = 1
 position = Vector2(668, 359)
 
 [node name="Enemigos2" parent="." instance=ExtResource("8_btp32")]
+z_index = 1
 position = Vector2(67, 431)
+collision_layer = 7
+collision_mask = 7
 
 [node name="PuntuacionEnPantalla" parent="." instance=ExtResource("3_4hwt7")]
-position = Vector2(66, -27)
+position = Vector2(66, -26)
 
 [node name="TextEdit" type="Label" parent="."]
 texture_filter = 1
@@ -60,13 +65,13 @@ text = "SCORE:"
 metadata/_edit_use_anchors_ = true
 
 [node name="BoosterVelocidad" parent="." instance=ExtResource("5_q3xm8")]
-position = Vector2(88, 42)
+position = Vector2(119, 40)
 
 [node name="BoosterVelocidad2" parent="." instance=ExtResource("5_q3xm8")]
-position = Vector2(249, 122)
+position = Vector2(248, 120)
 
 [node name="BoosterVelocidad3" parent="." instance=ExtResource("5_q3xm8")]
-position = Vector2(378, 282)
+position = Vector2(377, 279)
 
 [node name="BoosterVelocidad4" parent="." instance=ExtResource("5_q3xm8")]
 position = Vector2(539, 377)
@@ -75,13 +80,13 @@ position = Vector2(539, 377)
 position = Vector2(39, 87)
 
 [node name="Vida2" parent="." instance=ExtResource("11_l1o7f")]
-position = Vector2(120, 87)
+position = Vector2(120, 88)
 
 [node name="Vida3" parent="." instance=ExtResource("11_l1o7f")]
 position = Vector2(393, 426)
 
 [node name="Vida4" parent="." instance=ExtResource("11_l1o7f")]
-position = Vector2(569, 202)
+position = Vector2(568, 200)
 
 [node name="Vida5" parent="." instance=ExtResource("11_l1o7f")]
 position = Vector2(185, 202)
@@ -89,8 +94,9 @@ position = Vector2(185, 202)
 [node name="Vida6" parent="." instance=ExtResource("11_l1o7f")]
 position = Vector2(681, 42)
 
-[node name="Bomba" parent="." instance=ExtResource("12_lfx60")]
-position = Vector2(680, 440)
+[node name="Puerta" parent="." instance=ExtResource("13_iwjdm")]
+z_index = 1
+position = Vector2(680, 439)
 
 [connection signal="body_entered" from="Enemigos" to="Enemigos" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigos2" to="Enemigos2" method="_on_body_entered"]
@@ -104,3 +110,4 @@ position = Vector2(680, 440)
 [connection signal="body_entered" from="Vida4" to="Vida4" method="_on_body_entered"]
 [connection signal="body_entered" from="Vida5" to="Vida5" method="_on_body_entered"]
 [connection signal="body_entered" from="Vida6" to="Vida6" method="_on_body_entered"]
+[connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
