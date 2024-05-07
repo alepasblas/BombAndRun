@@ -18,6 +18,7 @@ public partial class jugador_1 : CharacterBody2D
 	{
 		Movimiento();
 
+		PruebaQuitarBloques();
 
 	}
 
@@ -87,6 +88,12 @@ public partial class jugador_1 : CharacterBody2D
 			// Crear una nueva instancia de bomba
 			Node scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
 
+			float alturaSuelo = 33; // Altura deseada del suelo
+			((RigidBody2D)scene).Position = new Vector2(Position.X, Position.Y + alturaSuelo);
+
+			((RigidBody2D)scene).GravityScale = 0;
+
+
 
 			GetTree().Root.AddChild(scene);
 
@@ -103,10 +110,33 @@ public partial class jugador_1 : CharacterBody2D
 			GetTree().ChangeSceneToFile("res://Escenas/Muerte.tscn");
 		}
 	}
-	
-	
 
-	
+	public void PruebaQuitarBloques()
+	{
+		TileMap tilemap = GetNode<TileMap>("TileMap");
+
+		int cellSizeX = 16;
+		int cellSizeY = 16;
+
+		int capa = 1;
+
+		int cellX = (int)Position.X / cellSizeX;
+		int cellY = (int)Position.Y / cellSizeY;
+
+		if (60 == 60 && 50 == 50)
+		{
+			Vector2I cellCoordinates = new Vector2I(10, 105);
+
+			tilemap.SetCell(capa, cellCoordinates, -1);
+		}
+
+
+	}
+
+
+
+
+
 
 
 }

@@ -32,7 +32,22 @@ public partial class rayo : Area2D
 			puntuacion += 100;
 			GuardarPuntuacion();
 
+			Area2D rayo = GetNode<Area2D>("Rayo");
+			Random rndX = new Random();
+			Random rndY = new Random();
+
+			int minX = 40;
+			int maxX = 680;
+			int minY = 40;
+			int maxY = 440;
+
+
+			rayo.Position = new Vector2(rndX.Next(minX, maxX), rndY.Next(minY, maxY));
 		}
+
+		
+		
+
 	}
 }
 

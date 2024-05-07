@@ -7,6 +7,7 @@ public partial class mundo_1 : Node2D
 
 	public override void _Ready()
 	{
+		
 		jugador= GetNode<jugador_1>("/root/Mundo1/Jugador1");
 	}
 

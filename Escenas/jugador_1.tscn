@@ -134,5 +134,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.125, 7.6875)
+position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_xw4a4")

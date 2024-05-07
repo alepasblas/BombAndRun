@@ -7,6 +7,7 @@ public partial class bomba : RigidBody2D
 	public override void _Ready()
 	{
 
+
 	}
 	public void Activar()
 	{
@@ -19,13 +20,14 @@ public partial class bomba : RigidBody2D
 	public override void _Process(double delta)
 	{
 		Activar();
+
 	}
 
 	public bomba(Vector2 playerPosition)
 	{
-		GravityScale = 0;
 
 		Position = playerPosition;
+		GetTree().Root.AddChild(this);
 	}
 
 
