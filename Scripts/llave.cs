@@ -17,10 +17,10 @@ public partial class llave : Area2D
 		if(conseguido)
 		{
 			GD.Print("Abriendo...");
-			//Error aqui al acceder al node arreglar
-			puerta puerta = GetNode<puerta>("/root/Puerta");
+			puerta puerta = GetNode<puerta>("../Puerta");
 			puerta.AbrirPuerta();
 			GD.Print("Puerta abierta");
+			QueueFree();
 
 		}
 	}
@@ -30,7 +30,7 @@ public partial class llave : Area2D
 		GD.Print("Llave conseguida");
 		conseguido = true;
 		GD.Print(conseguido);
-		//QueueFree();
+		
 		
 		
 	}

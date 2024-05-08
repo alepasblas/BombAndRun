@@ -39,7 +39,7 @@ zoom = Vector2(1.8, 1.8)
 
 [node name="Jugador1" parent="." instance=ExtResource("2_xngj0")]
 z_index = 1
-position = Vector2(41, 35)
+position = Vector2(42, 45)
 
 [node name="Enemigos" parent="." instance=ExtResource("8_btp32")]
 position = Vector2(668, 359)
@@ -96,7 +96,7 @@ position = Vector2(185, 204)
 position = Vector2(680, 44)
 
 [node name="Llave" parent="." instance=ExtResource("13_2jict")]
-position = Vector2(98, 49)
+position = Vector2(58, 439)
 
 [node name="Puerta" parent="." instance=ExtResource("13_iwjdm")]
 z_index = 1
@@ -115,3 +115,4 @@ position = Vector2(680, 444)
 [connection signal="body_entered" from="Vida5" to="Vida5" method="_on_body_entered"]
 [connection signal="body_entered" from="Vida6" to="Vida6" method="_on_body_entered"]
 [connection signal="body_entered" from="Llave" to="Llave" method="_on_body_entered"]
+[connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]

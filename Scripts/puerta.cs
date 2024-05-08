@@ -21,7 +21,7 @@ public partial class puerta : Area2D
 
 	}
 
-	private void _on_body_entered(Node body)
+	private void _on_body_entered(Node2D body)
 	{
 		
 		GD.Print("¡Cuerpo entrado!");
@@ -49,6 +49,5 @@ public partial class puerta : Area2D
 
 
 }
-
 
 
