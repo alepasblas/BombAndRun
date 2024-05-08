@@ -28,7 +28,7 @@ public partial class jugador_1 : CharacterBody2D
 
 		Velocity = mov.Normalized() * velocidad;
 		MoveAndSlide();
-		PonerBomba();
+		//PonerBomba();
 	}
 
 	public override void _Process(double delta)
@@ -79,6 +79,7 @@ public partial class jugador_1 : CharacterBody2D
 		animPlayer.Play("MovArriba");
 	}
 	
+	/*
 	public void PonerBomba()
 	{
 		if (Input.IsActionJustPressed("ColocarBomba") && bombaInstance == null)
@@ -96,7 +97,7 @@ public partial class jugador_1 : CharacterBody2D
 			GetTree().Root.AddChild(scene);
 
 		}
-	}
+	}*/
 
 
 

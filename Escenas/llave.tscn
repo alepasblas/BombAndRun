@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxgv4ch7st1uw"]
+
+[ext_resource type="Texture2D" uid="uid://blbq7k62ksrbq" path="res://imagenes/llave.png" id="1_cfxys"]
+[ext_resource type="Script" path="res://Scripts/llave.cs" id="1_m735t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fhisd"]
+radius = 3.0
+height = 16.0
+
+[node name="Llave" type="Area2D"]
+script = ExtResource("1_m735t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_cfxys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CapsuleShape2D_fhisd")

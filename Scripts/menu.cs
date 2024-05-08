@@ -34,10 +34,17 @@ public partial class menu : Control
 	{
 		GetTree().Quit();
 	}
-	
+	private void _on_como_jugar_pressed()
+	{
+		//Poner el get tree
+	}
+		
 	//Romer menu al estilo geometry dash
 	
 }
+
+
+
 
 
 
