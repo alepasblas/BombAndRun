@@ -26,9 +26,10 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhpfy"]
-size = Vector2(14.125, 16.625)
+size = Vector2(15.0625, 16.625)
 
 [node name="Enemigos" type="Area2D"]
+process_physics_priority = 1
 z_index = 1
 script = ExtResource("1_a3082")
 
@@ -47,8 +48,8 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-light_mask = 3
+light_mask = 0
 visibility_layer = 3
 z_index = 1
-position = Vector2(-1.9375, 1.6875)
+position = Vector2(-2.46875, 2)
 shape = SubResource("RectangleShape2D_dhpfy")

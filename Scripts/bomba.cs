@@ -41,7 +41,7 @@ public partial class bomba : RigidBody2D
 	{
 		base._PhysicsProcess(delta);
 
-		verificarTile();
+		//verificarTile();
 	}
 
 	public bomba(Vector2 playerPosition)
@@ -50,7 +50,7 @@ public partial class bomba : RigidBody2D
 		Position = playerPosition;
 		GetTree().Root.AddChild(this);
 	}
-
+	/*
 	public bool verificarTile()
 	{
 		var posicionTile = tilemap.LocalToMap(GlobalPosition);
@@ -73,13 +73,27 @@ public partial class bomba : RigidBody2D
 
 		}
 		return false;
-	}
+	}*/
 
 	public void _on_DeletionTimer_timeout() 
 	{
 
 		QueueFree();
 	}
+
+	private void _on_body_entered(Node body)
+	{
+		if (body is enemigos enemigo)
+		{
+
+			Node enemigo1 = GetNode<Node>($"../Enemigos");
+			enemigo1.QueueFree();
+			Node enemigo2 = GetNode<Node>($"../Enemigos2");
+			enemigo2 .QueueFree();
+			QueueFree();
+		}
+	}
+
 
 
 }

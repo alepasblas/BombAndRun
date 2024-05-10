@@ -10,7 +10,6 @@ public partial class jugador_1 : CharacterBody2D
 	public int velocidad = 100;
 	
 	int vidas = 5;
-	bomba bombaInstance;
 
 	
 
@@ -28,7 +27,7 @@ public partial class jugador_1 : CharacterBody2D
 
 		Velocity = mov.Normalized() * velocidad;
 		MoveAndSlide();
-		//PonerBomba();
+		PonerBomba();
 	}
 
 	public override void _Process(double delta)
@@ -79,25 +78,28 @@ public partial class jugador_1 : CharacterBody2D
 		animPlayer.Play("MovArriba");
 	}
 	
-	/*
+	
 	public void PonerBomba()
 	{
-		if (Input.IsActionJustPressed("ColocarBomba") && bombaInstance == null)
+		if (Input.IsActionJustPressed("ColocarBomba"))
 		{
 			// Crear una nueva instancia de bomba
-			Node scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
+			//Node scene = ResourceLoader.Load<PackedScene>("res://Escenas/bomba.tscn").Instantiate();
 
-			float alturaSuelo = 33; // Altura deseada del suelo
-			((RigidBody2D)scene).Position = new Vector2(Position.X, Position.Y + alturaSuelo);
+			RigidBody2D bombaM = GetNode<RigidBody2D>($"../Bomba");
 
-			((RigidBody2D)scene).GravityScale = 0;
+			//float alturaSuelo = 33; // Altura deseada del suelo
+			//((RigidBody2D)scene).Position = new Vector2(Position.X, Position.Y + alturaSuelo);
+
+			((RigidBody2D)bombaM).Position = Position;
 
 
 
-			GetTree().Root.AddChild(scene);
+
+			//GetTree().Root.AddChild(scene);
 
 		}
-	}*/
+	}
 
 
 

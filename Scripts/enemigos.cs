@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class enemigos : Godot.Area2D
+public partial class enemigos : Area2D
 {
 
 	private int velocidad;
@@ -49,6 +49,7 @@ public partial class enemigos : Godot.Area2D
 
 
 }
+
 
 
 
