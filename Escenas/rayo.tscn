@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cjj0cayii14kv" path="res://imagenes/rayo.png" id="1_04bgk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywjrd"]
-size = Vector2(4, 12)
+size = Vector2(6, 12)
 
 [node name="Rayo" type="Area2D"]
 script = ExtResource("1_0p0pp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2.38419e-07, 2.38419e-07)
+position = Vector2(-2.84217e-14, 0)
 scale = Vector2(0.0231788, 0.0319377)
 texture = ExtResource("1_04bgk")
 
