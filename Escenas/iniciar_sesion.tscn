@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjkrtlk70t2ul"]
+
+[ext_resource type="Script" path="res://Scripts/IniciarSesion.cs" id="1_2snfj"]
+
+[node name="IniciarSesion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2snfj")
+
+[node name="Contrasena" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 527.0
+offset_right = 1437.0
+offset_bottom = 623.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Contraseña"
+
+[node name="Usuario" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 350.0
+offset_right = 1439.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Usuario"
+
+[node name="Titulo" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 842.0
+offset_top = 146.0
+offset_right = 1110.0
+offset_bottom = 226.0
+theme_override_font_sizes/font_size = 40
+text = "Iniciar Sesión"
+
+[node name="Entrar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 765.0
+offset_right = 1062.0
+offset_bottom = 838.0
+theme_override_font_sizes/font_size = 40
+text = "Entrar"
+
+[connection signal="pressed" from="Entrar" to="." method="_on_entrar_pressed"]
