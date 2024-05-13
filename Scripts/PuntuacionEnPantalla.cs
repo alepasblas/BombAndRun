@@ -7,12 +7,18 @@ public partial class PuntuacionEnPantalla : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Label label = GetNode<Label>("PuntuacionPantalla");
+
+		StreamWriter miFichero = new StreamWriter("Archivos/puntuacionTemporal.txt");
+		miFichero.WriteLine("");
+		miFichero.Close();
+		label.Text="";
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		var label = GetNode<Label>("PuntuacionPantalla");
+		Label label = GetNode<Label>("PuntuacionPantalla");
 		label.Text = LeerInfoFichero();
 	}
 

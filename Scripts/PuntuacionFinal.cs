@@ -2,6 +2,7 @@
 using Godot;
 using System;
 using System.IO;
+using System.Linq;
 
 public partial class PuntuacionFinal : Node2D
 {
@@ -24,7 +25,16 @@ public partial class PuntuacionFinal : Node2D
 
 		try
 		{
-			String[] fichero= File.ReadAllLines("Archivos/puntuacion.txt");
+			string[] fichero= File.ReadAllLines("Archivos/puntuacion.txt");
+			
+			string[] nombresOrdenados = fichero.OrderBy(num => num).ToArray();
+			
+			Console.WriteLine("Array ordenado:");
+			foreach (string nom in nombresOrdenados)
+			{
+				Console.WriteLine(nom);
+			}
+
 
 			
 			

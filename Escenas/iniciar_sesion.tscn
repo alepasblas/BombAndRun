@@ -32,10 +32,10 @@ placeholder_text = "Usuario"
 
 [node name="IniciarSesionBoton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 992.0
-offset_top = 163.0
-offset_right = 1260.0
-offset_bottom = 243.0
+offset_left = 975.0
+offset_top = 144.0
+offset_right = 1240.0
+offset_bottom = 224.0
 theme_override_font_sizes/font_size = 40
 text = "Iniciar Sesión"
 script = ExtResource("2_wx71i")
@@ -51,10 +51,10 @@ text = "Entrar"
 
 [node name="RegistrarseButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 666.0
-offset_top = 160.0
+offset_left = 676.0
+offset_top = 144.0
 offset_right = 901.0
-offset_bottom = 240.0
+offset_bottom = 224.0
 theme_override_font_sizes/font_size = 40
 text = "Registrarse"
 
