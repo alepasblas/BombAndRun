@@ -5,6 +5,12 @@ using System.IO;
 
 public partial class IniciarSesion : Control
 {
+
+	private void _on_registrarse_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Escenas/Registro.tscn");
+	}
+
 	private void _on_entrar_pressed()
 	{
 		string usuario = "";
@@ -18,7 +24,8 @@ public partial class IniciarSesion : Control
 		TextEdit Usuario = GetNode<TextEdit>("Usuario");
 		TextEdit Contrasena = GetNode<TextEdit>("Contrasena");
 		usuario = Usuario.Text;
-		contrasena = Contrasena.Text;
+		contrasena = Contrasena.Text.Sha256Text();
+
 
 		bool credencialesCorrectas = false;
 		for (int i = 0; i < usuarios.Count; i++)
@@ -35,9 +42,12 @@ public partial class IniciarSesion : Control
 		}
 		else
 		{
+			
 			GD.Print("Usuario o contraseña incorrecto");
 		}
 	}
 }
+
+
 
 

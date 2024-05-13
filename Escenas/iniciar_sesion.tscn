@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjkrtlk70t2ul"]
+[gd_scene load_steps=3 format=3 uid="uid://cjkrtlk70t2ul"]
 
 [ext_resource type="Script" path="res://Scripts/IniciarSesion.cs" id="1_2snfj"]
+[ext_resource type="Script" path="res://Scripts/IniciarSesionBoton.cs" id="2_wx71i"]
 
 [node name="IniciarSesion" type="Control"]
 layout_mode = 3
@@ -29,14 +30,15 @@ offset_bottom = 446.0
 theme_override_font_sizes/font_size = 50
 placeholder_text = "Usuario"
 
-[node name="Titulo" type="TextEdit" parent="."]
+[node name="IniciarSesionBoton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 842.0
-offset_top = 146.0
-offset_right = 1110.0
-offset_bottom = 226.0
+offset_left = 992.0
+offset_top = 163.0
+offset_right = 1260.0
+offset_bottom = 243.0
 theme_override_font_sizes/font_size = 40
 text = "Iniciar Sesión"
+script = ExtResource("2_wx71i")
 
 [node name="Entrar" type="Button" parent="."]
 layout_mode = 0
@@ -47,4 +49,14 @@ offset_bottom = 838.0
 theme_override_font_sizes/font_size = 40
 text = "Entrar"
 
+[node name="RegistrarseButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 160.0
+offset_right = 901.0
+offset_bottom = 240.0
+theme_override_font_sizes/font_size = 40
+text = "Registrarse"
+
 [connection signal="pressed" from="Entrar" to="." method="_on_entrar_pressed"]
+[connection signal="pressed" from="RegistrarseButton" to="." method="_on_registrarse_button_pressed"]
