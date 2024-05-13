@@ -10,13 +10,17 @@ public partial class bomba : RigidBody2D
 	Timer deletionTimer; 
 
 	TileMap tilemap;
+	public bomba()
+	{
 
-	// Called when the node enters the scene tree for the first time.
+	}
+
 	public override void _Ready()
 	{
 
 		tilemap = GetNode<TileMap>("TileMap");
-		deletionTimer = GetNode<Timer>("DeletionTimer"); 
+		deletionTimer = GetNode<Timer>("DeletionTimer");
+		Activar();
 
 	}
 
@@ -24,15 +28,15 @@ public partial class bomba : RigidBody2D
 	{
 		Sprite2D sprite = GetNode<Sprite2D>("Sprite2D");
 		AnimationPlayer animPlayer = sprite.GetNode<AnimationPlayer>("AnimationPlayer");
-		animPlayer.Play("BombaAnim");
+		if (!animPlayer.IsPlaying())
+			animPlayer.Play("BombaAnim");
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 		if (!destruido) 
 		{
-			Activar();
+			
 			destruido = true;
 		}
 	}
