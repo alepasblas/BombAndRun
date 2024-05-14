@@ -16,8 +16,7 @@ public partial class BoosterVida : Area2D
 	{
 		if (body is jugador_1 jugador)
 			{
-				jugador.salud += 50;
-				GD.Print("+50 vida");
+				jugador.salud += 25;
 				QueueFree();
 			}
 	}

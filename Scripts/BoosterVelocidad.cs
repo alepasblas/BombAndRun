@@ -18,7 +18,7 @@ public partial class BoosterVelocidad : Area2D
 	{
 		if (body is jugador_1 jugador)
 		{
-			jugador.velocidad += 50;
+			jugador.velocidad += 25;
 			QueueFree();
 		}
 	}

@@ -7451,7 +7451,7 @@ separation = Vector2i(1, 1)
 61:39/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_0hi8p"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 65535
 custom_data_layer_0/name = "romper"
 custom_data_layer_0/type = 1
 sources/1 = SubResource("TileSetAtlasSource_qvl1l")

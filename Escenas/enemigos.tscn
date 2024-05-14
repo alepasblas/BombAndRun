@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://pw38yiwt08a"]
 
-[ext_resource type="Script" path="res://Scripts/enemigos.cs" id="1_a3082"]
+[ext_resource type="Script" path="res://Scripts/Enemigo1.cs" id="1_tp8ox"]
 [ext_resource type="Texture2D" uid="uid://bjtggo2xbe3yt" path="res://imagenes/Enemigo1.png" id="2_xcv17"]
 
 [sub_resource type="Animation" id="Animation_nv1sw"]
@@ -31,7 +31,7 @@ size = Vector2(15.0625, 16.625)
 [node name="Enemigos" type="Area2D"]
 process_physics_priority = 1
 z_index = 1
-script = ExtResource("1_a3082")
+script = ExtResource("1_tp8ox")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 1
