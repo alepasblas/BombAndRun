@@ -9,6 +9,8 @@ namespace BombermanV1.Scripts
 {
 	public partial class Enemigo1:enemigos
 	{
+		private float tiempoTranscurrido = 0f;
+		private bool aumentoRealizado = false;
 		public override void _Ready()
 		{
 			velocidad = 40;
@@ -26,6 +28,14 @@ namespace BombermanV1.Scripts
 		public override void _Process(double delta)
 		{
 			Animacion();
+
+			tiempoTranscurrido += (float)delta;
+
+			if (tiempoTranscurrido >= 30 && !aumentoRealizado)
+			{
+				velocidad += 20;
+				aumentoRealizado = true;
+			}
 
 			Vector2 posPersonaje = juego.GetPosicionPersonaje();
 

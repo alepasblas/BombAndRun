@@ -36,7 +36,7 @@ public partial class menu : Control
 	}
 	private void _on_como_jugar_pressed()
 	{
-		//Poner el get tree
+		GetTree().ChangeSceneToFile("res://Escenas/ComoJugar.tscn");
 	}
 		
 	//Romer menu al estilo geometry dash

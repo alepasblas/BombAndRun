@@ -1,7 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://ddjc23aj0egwl"]
+[gd_scene load_steps=6 format=3 uid="uid://ddjc23aj0egwl"]
 
 [ext_resource type="Script" path="res://Scripts/enemigos_2.cs" id="1_1m7fu"]
 [ext_resource type="Texture2D" uid="uid://cnr8w2yf0175" path="res://imagenes/enemigo2.png" id="1_puewk"]
+
+[sub_resource type="Animation" id="Animation_nv5kl"]
+resource_name = "animacionP2"
+length = 1.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 6, 9, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_k8gu8"]
+_data = {
+"animacionP2": SubResource("Animation_nv5kl")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mr6n5"]
 radius = 4.0
@@ -17,6 +39,12 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_puewk")
 hframes = 6
 vframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_k8gu8")
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)

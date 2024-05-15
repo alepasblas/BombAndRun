@@ -3,26 +3,35 @@ using System;
 
 public partial class enemigos_2 : enemigos
 {
-	
-	
+	private float tiempoTranscurrido = 0f;
+	private bool aumentoRealizado = false;
+
 	public override void _Ready()
 	{
 		velocidad = 30;
 
 		juego= GetNode<mundo_1>("/root/Mundo1");
 	}
-	/*
+	
 	public void Animacion()
 	{
 		Sprite2D spriteEnemigo = GetNode<Sprite2D>("Sprite2D");
 		AnimationPlayer animacion = spriteEnemigo.GetNode<AnimationPlayer>("AnimationPlayer");
-		animacion.Play("enemigo");
+		animacion.Play("animacionP2");
 	}
-	*/
+	
 
 	public override void _Process(double delta)
 	{
-		//Animacion();
+		Animacion();
+
+		tiempoTranscurrido += (float)delta;
+
+		if (tiempoTranscurrido >= 20 && !aumentoRealizado)
+		{
+			velocidad += 30;
+			aumentoRealizado = true;
+		}
 
 		Vector2 posPersonaje = juego.GetPosicionPersonaje();
 		

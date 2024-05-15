@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://0m31d5y5e0fg"]
+
+[ext_resource type="Texture2D" uid="uid://dk4m1mub0djk8" path="res://imagenes/nuevoMapa.png" id="1_8qoec"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xgke8"]
+resource_name = "Mapa"
+texture = ExtResource("1_8qoec")
+margins = Vector2i(4, 8)
+separation = Vector2i(1, 0)
+0:1/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_872nt"]
+sources/1 = SubResource("TileSetAtlasSource_xgke8")
+
+[node name="TileMap" type="TileMap"]
+tile_set = SubResource("TileSet_872nt")
+format = 2

@@ -3,7 +3,8 @@ using System;
 
 public partial class enemigos : Area2D
 {
-
+	
+	
 	[Export]
 	protected int velocidad;
 
@@ -18,7 +19,7 @@ public partial class enemigos : Area2D
 		this.velocidad = velocidad;
 		this.juego = juego;
 	}
-
+	
 
 }
 

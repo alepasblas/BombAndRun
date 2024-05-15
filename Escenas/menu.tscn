@@ -62,15 +62,6 @@ theme_override_fonts/font = ExtResource("4_j1nrr")
 theme_override_font_sizes/font_size = 25
 text = "Puntuación"
 
-[node name="Personaje" type="Button" parent="VBoxBotones"]
-texture_filter = 1
-layout_mode = 2
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 10
-theme_override_fonts/font = ExtResource("4_j1nrr")
-theme_override_font_sizes/font_size = 25
-text = "Personaje"
-
 [node name="Créditos" type="Button" parent="VBoxBotones"]
 texture_filter = 1
 layout_mode = 2
@@ -112,6 +103,5 @@ text = "BOMB AND RUN!"
 [connection signal="pressed" from="VBoxBotones/Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxBotones/Como jugar" to="." method="_on_como_jugar_pressed"]
 [connection signal="pressed" from="VBoxBotones/Puntuación" to="." method="_on_puntuación_pressed"]
-[connection signal="pressed" from="VBoxBotones/Personaje" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="VBoxBotones/Créditos" to="." method="_on_créditos_pressed"]
 [connection signal="pressed" from="VBoxBotones/Salir" to="." method="_on_salir_pressed"]

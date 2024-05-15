@@ -90,10 +90,10 @@ public partial class bomba : RigidBody2D
 		if (body is enemigos enemigo)
 		{
 
-			Node enemigo1 = GetNode<Node>($"../Enemigos");
+			enemigos enemigo1 = GetNode<enemigos>($"../Enemigos");
 			enemigo1.QueueFree();
-			Node enemigo2 = GetNode<Node>($"../Enemigos2");
-			enemigo2 .QueueFree();
+			enemigos enemigo2 = GetNode<enemigos>($"../Enemigos2");
+			enemigo2.QueueFree();
 			QueueFree();
 		}
 	}

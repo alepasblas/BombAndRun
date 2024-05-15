@@ -1,0 +1,85 @@
+[gd_scene load_steps=3 format=3 uid="uid://fl615q4t1e4c"]
+
+[ext_resource type="FontFile" uid="uid://dslvlpp652rvj" path="res://Fuente/arco/ARCO for OSX.otf" id="1_ac8x2"]
+[ext_resource type="Script" path="res://Scripts/ComoJugar.cs" id="1_w4sin"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w4sin")
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 580.0
+offset_right = 1921.0
+offset_bottom = 983.0
+theme_override_font_sizes/font_size = 40
+text = "Este juego consiste en un jugador (tu), con una serie de enemigos, que van directamente hacia ti, 
+y que tienes que tratar de huir evitando que te toquen, ya que si te tocan te iran quitando vida
+hasta matarte, no obstante, hay diferentes boosters por todo el mapa, como vida extra, 
+aumento de velocidad, que iran haciendo mas divertida la experiencia, conforme mas tiempo
+pase en la partida, los enemigos son mas fuertes, por lo que no tardes mucho en terminar la 
+partida, para ello tienes que encontrar la llave que se encuentra en el mapa y una vez la 
+consigas, la puerta estara disponible y podrás salir por ella y asi ganar."
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 480.0
+offset_right = 677.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 40
+text = "D: Movimiento hacia la derecha"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 380.0
+offset_right = 602.0
+offset_bottom = 515.0
+theme_override_font_sizes/font_size = 40
+text = "S: Movimiento hacia abajo"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 75.0
+offset_top = 280.0
+offset_right = 697.0
+offset_bottom = 415.0
+theme_override_font_sizes/font_size = 40
+text = "A: Movimiento hacia la izquierda"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 180.0
+offset_right = 697.0
+offset_bottom = 277.0
+theme_override_font_sizes/font_size = 40
+text = "W: Movimiento hacia arriba"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1921.0
+offset_bottom = 1084.0
+theme_override_fonts/font = ExtResource("1_ac8x2")
+theme_override_font_sizes/font_size = 50
+text = "
+Como jugar"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 114.0
+offset_right = 107.0
+offset_bottom = 145.0
+rotation = -1.5708
+scale = Vector2(2, 2)
+text = "𖤂"
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

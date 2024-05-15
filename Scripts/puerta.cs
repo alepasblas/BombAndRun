@@ -33,7 +33,7 @@ public partial class puerta : Area2D
 
 			if(animatedSprite.Frame == 1)
 			{
-				GetTree().ChangeSceneToFile("res://Escenas/ganaste.tscn");
+				GetTree().ChangeSceneToFile("res://Escenas/menu.tscn");
 
 			}
 			else

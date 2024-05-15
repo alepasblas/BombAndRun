@@ -25,6 +25,8 @@ public partial class PuntuacionFinal : Node2D
 
 		try
 		{
+			
+			
 			string[] fichero= File.ReadAllLines("Archivos/puntuacion.txt");
 			
 			string[] nombresOrdenados = fichero.OrderBy(num => num).ToArray();
@@ -50,4 +52,12 @@ public partial class PuntuacionFinal : Node2D
 
 		return ficheroEntero;
 	}
+	
+	private void _on_button_pressed()
+	{
+		GetTree().ChangeSceneToFile("res://Escenas/menu.tscn");
+	}
 }
+
+
+

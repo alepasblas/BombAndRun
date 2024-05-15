@@ -114,7 +114,9 @@ z_index = 1
 position = Vector2(680, 444)
 
 [node name="Bomba" parent="." instance=ExtResource("14_dpd3a")]
-position = Vector2(168, 141)
+position = Vector2(39, 300)
+collision_layer = 1
+collision_mask = 1
 gravity_scale = 0.0
 
 [connection signal="body_entered" from="Enemigos3" to="Enemigos3" method="_on_body_entered"]
