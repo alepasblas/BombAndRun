@@ -78,7 +78,7 @@ public partial class jugador_1 : CharacterBody2D
 		animPlayer.Play("MovArriba");
 	}
 	
-	
+	/*
 	public void PonerBomba()
 	{
 		if (Input.IsActionJustPressed("ColocarBomba"))
@@ -99,7 +99,7 @@ public partial class jugador_1 : CharacterBody2D
 			//GetTree().Root.AddChild(scene);
 
 		}
-	}
+	}*/
 
 
 

@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_w4sin")
 
 [node name="Label7" type="Label" parent="."]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 580.0
 offset_right = 1921.0
@@ -27,6 +28,7 @@ partida, para ello tienes que encontrar la llave que se encuentra en el mapa y u
 consigas, la puerta estara disponible y podrás salir por ella y asi ganar."
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 480.0
 offset_right = 677.0
@@ -35,6 +37,7 @@ theme_override_font_sizes/font_size = 40
 text = "D: Movimiento hacia la derecha"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 380.0
 offset_right = 602.0
@@ -43,6 +46,7 @@ theme_override_font_sizes/font_size = 40
 text = "S: Movimiento hacia abajo"
 
 [node name="Label5" type="Label" parent="."]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 280.0
 offset_right = 697.0

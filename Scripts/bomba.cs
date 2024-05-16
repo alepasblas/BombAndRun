@@ -72,9 +72,6 @@ public partial class bomba : RigidBody2D
 
 
 			}
-
-			
-
 		}
 		return false;
 	}*/

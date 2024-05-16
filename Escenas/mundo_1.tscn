@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://mox3g0d1p0k2"]
+[gd_scene load_steps=15 format=3 uid="uid://mox3g0d1p0k2"]
 
 [ext_resource type="Script" path="res://Scripts/mundo_1.cs" id="1_kwr4l"]
 [ext_resource type="PackedScene" uid="uid://d04r6rsuj63ox" path="res://Escenas/mapaConObstaculosPermanentes.tscn" id="1_u80c6"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://dpggxnf4sx5lu" path="res://Escenas/BoosterVida.tscn" id="11_l1o7f"]
 [ext_resource type="PackedScene" uid="uid://cxgv4ch7st1uw" path="res://Escenas/llave.tscn" id="13_2jict"]
 [ext_resource type="PackedScene" uid="uid://ba3w6vv5clmw1" path="res://Escenas/puerta.tscn" id="13_iwjdm"]
-[ext_resource type="PackedScene" uid="uid://b5hrypehq3w5d" path="res://Escenas/bomba.tscn" id="14_dpd3a"]
 [ext_resource type="PackedScene" uid="uid://ddjc23aj0egwl" path="res://Escenas/enemigos_2.tscn" id="15_g3oiw"]
 
 [node name="Mundo1" type="Node2D"]
@@ -113,12 +112,6 @@ position = Vector2(58, 439)
 z_index = 1
 position = Vector2(680, 444)
 
-[node name="Bomba" parent="." instance=ExtResource("14_dpd3a")]
-position = Vector2(39, 300)
-collision_layer = 1
-collision_mask = 1
-gravity_scale = 0.0
-
 [connection signal="body_entered" from="Enemigos3" to="Enemigos3" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigos" to="Enemigos" method="_on_body_entered"]
 [connection signal="body_entered" from="Enemigos2" to="Enemigos2" method="_on_body_entered"]
@@ -134,4 +127,3 @@ gravity_scale = 0.0
 [connection signal="body_entered" from="Vida6" to="Vida6" method="_on_body_entered"]
 [connection signal="body_entered" from="Llave" to="Llave" method="_on_body_entered"]
 [connection signal="body_entered" from="Puerta" to="Puerta" method="_on_body_entered"]
-[connection signal="body_entered" from="Bomba" to="Bomba" method="_on_body_entered"]
