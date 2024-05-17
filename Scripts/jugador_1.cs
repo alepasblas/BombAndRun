@@ -27,7 +27,7 @@ public partial class jugador_1 : CharacterBody2D
 
 		Velocity = mov.Normalized() * velocidad;
 		MoveAndSlide();
-		PonerBomba();
+		//PonerBomba();
 	}
 
 	public override void _Process(double delta)
