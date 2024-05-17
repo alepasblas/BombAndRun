@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BombermanV1.Scripts
 {
-    public class Boost 
+    public partial class Boost:Area2D
     {
         public void boosterVelocidad(Node body)
         {
@@ -19,7 +19,7 @@ namespace BombermanV1.Scripts
             }
         }
 
-        private void boosterVida(Node2D body)
+        public void boosterVida(Node2D body)
         {
             if (body is jugador_1 jugador)
             {
