@@ -1,13 +1,6 @@
 Ramón: 1700, fecha: 15/05/2024 9:21:03
-Ramón: , fecha: 16/05/2024 20:30:29
-Ramón: , fecha: 16/05/2024 20:33:38
-Ramón: , fecha: 16/05/2024 20:34:08
-Carlos: , fecha: 17/05/2024 8:09:57
 Carlos: 200, fecha: 17/05/2024 8:10:38
-Carlos: , fecha: 17/05/2024 8:11:54
-Carlos: , fecha: 17/05/2024 8:14:41
-Carlos: , fecha: 17/05/2024 8:28:45
-Carlos: , fecha: 17/05/2024 8:29:26
-Carlos: , fecha: 17/05/2024 8:29:55
-Carlos: , fecha: 17/05/2024 8:30:49
 Carlos: 2500, fecha: 17/05/2024 8:31:42
+Carlos: , fecha: 17/05/2024 9:15:24
+Carlos: , fecha: 17/05/2024 9:19:41
+Carlos: 500, fecha: 17/05/2024 9:20:04

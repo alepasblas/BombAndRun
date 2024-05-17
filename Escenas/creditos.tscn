@@ -1,30 +1,36 @@
 [gd_scene load_steps=5 format=3 uid="uid://cwpj6iqoqh2bx"]
 
-[ext_resource type="Texture2D" uid="uid://vouiwgvw7g2u" path="res://imagenes/fotoCreditos.jpg" id="1_a41t0"]
 [ext_resource type="Script" path="res://Scripts/creditos.cs" id="1_ptpnp"]
 [ext_resource type="Texture2D" uid="uid://rad85hmqlgi2" path="res://imagenes/bocadillo.png" id="2_4mcn0"]
+[ext_resource type="Texture2D" uid="uid://cuomfg5od5l0b" path="res://imagenes/fondoCreditos.jpeg" id="2_7myfw"]
 [ext_resource type="FontFile" uid="uid://bb7vnc4w7w7lv" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Mini Square.ttf" id="3_4isxa"]
 
 [node name="Creditos" type="Node2D"]
 script = ExtResource("1_ptpnp")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1928.0
+offset_bottom = 1076.0
+color = Color(0.0196078, 0.662745, 0.941176, 1)
+
+[node name="FondoCreditos" type="Sprite2D" parent="."]
+position = Vector2(984, 541)
+scale = Vector2(1.05957, 1.05371)
+texture = ExtResource("2_7myfw")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
-[node name="FotoCreditos" type="Sprite2D" parent="."]
-position = Vector2(959.5, 540)
-scale = Vector2(0.476438, 0.401786)
-texture = ExtResource("1_a41t0")
-
 [node name="Bocadillo" type="Sprite2D" parent="."]
-position = Vector2(893, 453)
+position = Vector2(1410.5, 207.5)
 scale = Vector2(0.962777, 0.936111)
 texture = ExtResource("2_4mcn0")
+flip_h = true
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 456.0
-offset_top = 306.0
-offset_right = 1309.0
-offset_bottom = 483.0
+offset_left = 1004.0
+offset_top = 59.0
+offset_right = 1819.0
+offset_bottom = 236.0
 theme_override_colors/background_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_4isxa")

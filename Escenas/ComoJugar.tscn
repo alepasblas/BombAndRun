@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://fl615q4t1e4c"]
+[gd_scene load_steps=4 format=3 uid="uid://fl615q4t1e4c"]
 
 [ext_resource type="FontFile" uid="uid://dslvlpp652rvj" path="res://Fuente/arco/ARCO for OSX.otf" id="1_ac8x2"]
 [ext_resource type="Script" path="res://Scripts/ComoJugar.cs" id="1_w4sin"]
+[ext_resource type="Texture2D" uid="uid://cpjk756upf6wt" path="res://imagenes/comojugar.jpeg" id="2_f3k6c"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,20 +13,69 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_w4sin")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1922.0
+offset_bottom = 1081.0
+color = Color(0.0313726, 0.239216, 0.513726, 1)
+
+[node name="Comojugar" type="Sprite2D" parent="."]
+position = Vector2(1012, 540)
+scale = Vector2(1, 1.04297)
+texture = ExtResource("2_f3k6c")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 163.0
+offset_right = 629.0
+offset_bottom = 249.0
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 264.0
+offset_right = 713.0
+offset_bottom = 356.0
+
+[node name="ColorRect4" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 367.0
+offset_right = 597.0
+offset_bottom = 457.0
+
+[node name="ColorRect5" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 470.0
+offset_right = 686.0
+offset_bottom = 552.0
+
+[node name="ColorRect6" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 578.0
+offset_right = 1840.0
+offset_bottom = 1061.0
+
 [node name="Label7" type="Label" parent="."]
 layout_mode = 0
 offset_left = 75.0
 offset_top = 580.0
-offset_right = 1921.0
-offset_bottom = 983.0
+offset_right = 1807.0
+offset_bottom = 1041.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
-text = "Este juego consiste en un jugador (tu), con una serie de enemigos, que van directamente hacia ti, 
-y que tienes que tratar de huir evitando que te toquen, ya que si te tocan te iran quitando vida
-hasta matarte, no obstante, hay diferentes boosters por todo el mapa, como vida extra, 
-aumento de velocidad, que iran haciendo mas divertida la experiencia, conforme mas tiempo
-pase en la partida, los enemigos son mas fuertes, por lo que no tardes mucho en terminar la 
-partida, para ello tienes que encontrar la llave que se encuentra en el mapa y una vez la 
-consigas, la puerta estara disponible y podrás salir por ella y asi ganar."
+text = "Este juego consiste en un jugador (tu), con una serie de enemigos, que van directamente
+hacia ti y que tienes que tratar de huir evitando que te toquen, ya que si te tocan te iran 
+quitando vida hasta matarte, no obstante, hay diferentes boosters por todo el mapa,
+como vida extra, aumento de velocidad, que iran haciendo mas divertida la experiencia, 
+conforme mas tiempo pase en la partida, los enemigos son mas fuertes, 
+por lo que no tardes mucho en terminar la partida, para ello tienes que encontrar 
+la llave que se encuentra en el mapa y una vez la consigas, 
+la puerta estara disponible y podrás salir por ella y asi ganar."
+horizontal_alignment = 3
 
 [node name="Label4" type="Label" parent="."]
 layout_mode = 0
@@ -33,6 +83,7 @@ offset_left = 75.0
 offset_top = 480.0
 offset_right = 677.0
 offset_bottom = 615.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "D: Movimiento hacia la derecha"
 
@@ -42,6 +93,7 @@ offset_left = 75.0
 offset_top = 380.0
 offset_right = 602.0
 offset_bottom = 515.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "S: Movimiento hacia abajo"
 
@@ -51,6 +103,7 @@ offset_left = 75.0
 offset_top = 280.0
 offset_right = 697.0
 offset_bottom = 415.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "A: Movimiento hacia la izquierda"
 
@@ -60,6 +113,7 @@ offset_left = 75.0
 offset_top = 180.0
 offset_right = 697.0
 offset_bottom = 277.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 40
 text = "W: Movimiento hacia arriba"
 

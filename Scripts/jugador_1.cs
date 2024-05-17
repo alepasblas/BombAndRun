@@ -9,7 +9,6 @@ public partial class jugador_1 : CharacterBody2D
 	[Export]
 	public int velocidad = 100;
 	
-	int vidas = 5;
 
 	
 
@@ -107,7 +106,6 @@ public partial class jugador_1 : CharacterBody2D
 	{
 		if(salud<=0)
 		{
-			//Poner la escena de cuando mueres
 			GetTree().ChangeSceneToFile("res://Escenas/Muerte.tscn");
 		}
 	}

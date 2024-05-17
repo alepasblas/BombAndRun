@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://do5abf7xpgnlh"]
+[gd_scene load_steps=5 format=3 uid="uid://do5abf7xpgnlh"]
 
 [ext_resource type="FontFile" uid="uid://ca0nvkgbawvmk" path="res://Fuente/kenney_kenney-fonts/Fonts/Kenney Rocket.ttf" id="1_b0gbe"]
+[ext_resource type="Script" path="res://Scripts/ganaste.cs" id="1_iiutw"]
 [ext_resource type="Texture2D" uid="uid://c4g2tgq5medcw" path="res://imagenes/Super-Bomberman-R-1.jpg" id="1_l6cec"]
 [ext_resource type="Texture2D" uid="uid://bkf4n1df4jx01" path="res://imagenes/recred.png" id="2_6yrv7"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_iiutw")
 
 [node name="Super-bomberman-r-1" type="Sprite2D" parent="."]
 position = Vector2(958, 545)
@@ -31,3 +33,14 @@ theme_override_font_sizes/font_size = 100
 text = "Ganaste!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 849.0
+offset_top = 906.0
+offset_right = 1073.0
+offset_bottom = 968.0
+theme_override_font_sizes/font_size = 30
+text = "Volver al menú"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
